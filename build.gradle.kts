@@ -1,10 +1,13 @@
 plugins {
   kotlin("jvm") version "1.5.10"
   kotlin("plugin.serialization") version "1.5.10"
+  id("org.jetbrains.dokka") version "1.4.32"
 }
 
 group = "de.nycode"
 version = "0.9.0"
+
+apply(from = "publishing.gradle.kts")
 
 repositories {
   mavenCentral()
@@ -21,6 +24,12 @@ dependencies {
   testImplementation("com.squareup.okhttp3", "mockwebserver3-junit5", "5.0.0-alpha.2")
   testImplementation("org.jetbrains.kotlinx", "kotlinx-serialization-protobuf", "1.2.1")
   testImplementation("org.jetbrains.kotlinx", "kotlinx-serialization-json", "1.2.1")
+}
+
+java {
+  toolchain {
+    languageVersion.set(JavaLanguageVersion.of(8))
+  }
 }
 
 tasks {
