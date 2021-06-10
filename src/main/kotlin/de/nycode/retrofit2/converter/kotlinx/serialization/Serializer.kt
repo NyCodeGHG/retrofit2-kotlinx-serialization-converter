@@ -1,4 +1,4 @@
-package com.jakewharton.retrofit2.converter.kotlinx.serialization
+package de.nycode.retrofit2.converter.kotlinx.serialization
 
 import java.lang.reflect.Type
 import kotlinx.serialization.BinaryFormat

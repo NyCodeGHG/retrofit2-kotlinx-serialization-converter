@@ -1,9 +1,9 @@
 @file:JvmName("KotlinSerializationConverterFactory")
 
-package com.jakewharton.retrofit2.converter.kotlinx.serialization
+package de.nycode.retrofit2.converter.kotlinx.serialization
 
-import com.jakewharton.retrofit2.converter.kotlinx.serialization.Serializer.FromBytes
-import com.jakewharton.retrofit2.converter.kotlinx.serialization.Serializer.FromString
+import de.nycode.retrofit2.converter.kotlinx.serialization.Serializer.FromBytes
+import de.nycode.retrofit2.converter.kotlinx.serialization.Serializer.FromString
 import java.lang.reflect.Type
 import kotlinx.serialization.BinaryFormat
 import kotlinx.serialization.ExperimentalSerializationApi

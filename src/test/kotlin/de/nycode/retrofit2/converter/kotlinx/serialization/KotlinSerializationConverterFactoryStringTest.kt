@@ -1,4 +1,4 @@
-package com.jakewharton.retrofit2.converter.kotlinx.serialization
+package de.nycode.retrofit2.converter.kotlinx.serialization
 
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
