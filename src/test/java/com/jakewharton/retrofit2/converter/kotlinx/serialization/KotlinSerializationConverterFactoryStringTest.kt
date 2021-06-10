@@ -2,34 +2,39 @@ package com.jakewharton.retrofit2.converter.kotlinx.serialization
 
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
-import okhttp3.MediaType
-import okhttp3.mockwebserver.MockResponse
-import okhttp3.mockwebserver.MockWebServer
-import org.junit.Assert.assertEquals
-import org.junit.Before
-import org.junit.Rule
-import org.junit.Test
+import mockwebserver3.MockResponse
+import mockwebserver3.MockWebServer
+import mockwebserver3.junit5.internal.MockWebServerExtension
+import okhttp3.MediaType.Companion.toMediaType
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.BeforeEach
+import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.extension.ExtendWith
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
 
-class KotlinSerializationConverterFactoryStringTest {
-  @get:Rule val server = MockWebServer()
+//@ExtendWith(MockWebServerExtension::class)
+class KotlinSerializationConverterFactoryStringTest(val server: MockWebServer) {
 
   private lateinit var service: Service
 
   interface Service {
-    @GET("/") fun deserialize(): Call<User>
-    @POST("/") fun serialize(@Body user: User): Call<Void?>
+    @GET("/")
+    fun deserialize(): Call<User>
+
+    @POST("/")
+    fun serialize(@Body user: User): Call<Void?>
   }
 
   @Serializable
   data class User(val name: String)
 
-  @Before fun setUp() {
-    val contentType = MediaType.get("application/json; charset=utf-8")
+  @BeforeEach
+  fun setUp() {
+    val contentType = "application/json; charset=utf-8".toMediaType()
     val retrofit = Retrofit.Builder()
       .baseUrl(server.url("/"))
       .addConverterFactory(Json.asConverterFactory(contentType))
@@ -37,13 +42,15 @@ class KotlinSerializationConverterFactoryStringTest {
     service = retrofit.create(Service::class.java)
   }
 
-  @Test fun deserialize() {
+  @Test
+  fun deserialize() {
     server.enqueue(MockResponse().setBody("""{"name":"Bob"}"""))
     val user = service.deserialize().execute().body()!!
     assertEquals(User("Bob"), user)
   }
 
-  @Test fun serialize() {
+  @Test
+  fun serialize() {
     server.enqueue(MockResponse())
     service.serialize(User("Bob")).execute()
     val request = server.takeRequest()

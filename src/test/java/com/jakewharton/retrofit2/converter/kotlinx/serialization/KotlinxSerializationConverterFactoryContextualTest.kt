@@ -9,22 +9,22 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.modules.SerializersModule
 import kotlinx.serialization.modules.contextual
-import okhttp3.MediaType
-import okhttp3.mockwebserver.MockResponse
-import okhttp3.mockwebserver.MockWebServer
-import org.junit.Assert.assertEquals
-import org.junit.Before
-import org.junit.Rule
-import org.junit.Test
+import mockwebserver3.MockResponse
+import mockwebserver3.MockWebServer
+import mockwebserver3.junit5.internal.MockWebServerExtension
+import okhttp3.MediaType.Companion.toMediaType
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.BeforeEach
+import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.extension.ExtendWith
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
 
-class KotlinxSerializationConverterFactoryContextualTest {
-  @get:Rule
-  val server = MockWebServer()
+//@ExtendWith(MockWebServerExtension::class)
+class KotlinxSerializationConverterFactoryContextualTest(val server: MockWebServer) {
 
   private lateinit var service: Service
 
@@ -53,12 +53,12 @@ class KotlinxSerializationConverterFactoryContextualTest {
     private data class UserResponse(val name: String)
   }
 
-  @Before
+  @BeforeEach
   fun setUp() {
     val module = SerializersModule {
       contextual(UserSerializer)
     }
-    val contentType = MediaType.get("application/json; charset=utf-8")
+    val contentType = "application/json; charset=utf-8".toMediaType()
     val retrofit = Retrofit.Builder()
       .baseUrl(server.url("/"))
       .addConverterFactory(Json { serializersModule = module }.asConverterFactory(contentType))
