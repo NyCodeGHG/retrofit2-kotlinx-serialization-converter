@@ -3,6 +3,9 @@ plugins {
   kotlin("plugin.serialization") version "1.5.10"
 }
 
+group = "de.nycode"
+version = "0.9.0"
+
 repositories {
   mavenCentral()
 }
