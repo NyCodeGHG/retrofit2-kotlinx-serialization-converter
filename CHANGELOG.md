@@ -1,6 +1,13 @@
 Change Log
 ==========
 
+Version 0.9.0 *(2021-06-10)*
+----------------------------
+ * Kotlin updated to 1.5.10
+ * Serialization updated to 1.2.1
+ * Migrated Tests to JUnit Jupiter from JUnit 4
+ * Migrated to Gradle Kotlin DSL
+
 Version 0.8.0 *(2020-10-09)*
 ----------------------------
 
