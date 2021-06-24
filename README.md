@@ -26,13 +26,25 @@ Because Kotlin serialization is so flexible in the types it supports, these conv
 types. If you are mixing this converter with another, you must add this instance _last_ to allow the other converters a
 chance to see their types.
 
+You can also use a Json or Protobuf builder to add custom serializer modules or ignore unknown keys.
+
+```kotlin
+val contentType = "application/json".toMediaType()
+val retrofit = Retrofit.Builder()
+    .baseUrl("https://example.com/")
+    .addConverterFactory(Json {
+        ignoreUnknownKeys = true
+    }.asConverterFactory(contentType))
+    .build()
+```
+
 ## Build Tools
 
 <details open>
 <summary>Gradle Kotlin</summary>
 
 ```kotlin
-implementation("de.nycode:retrofit2-kotlinx-serialization-converter:0.9.0")
+implementation("de.nycode:retrofit2-kotlinx-serialization-converter:0.9.1")
 ```
 
 </details>
@@ -41,7 +53,7 @@ implementation("de.nycode:retrofit2-kotlinx-serialization-converter:0.9.0")
 <summary>Gradle Groovy</summary>
 
 ```groovy
-implementation 'de.nycode:retrofit2-kotlinx-serialization-converter:0.9.0'
+implementation 'de.nycode:retrofit2-kotlinx-serialization-converter:0.9.1'
 ```
 
 </details>
@@ -50,10 +62,11 @@ implementation 'de.nycode:retrofit2-kotlinx-serialization-converter:0.9.0'
 <summary>Maven</summary>
 
 ```xml
+
 <dependency>
     <groupId>de.nycode</groupId>
     <artifactId>retrofit2-kotlinx-serialization-converter</artifactId>
-    <version>0.9.0</version>
+    <version>0.9.1</version>
 </dependency>
 ```
 
