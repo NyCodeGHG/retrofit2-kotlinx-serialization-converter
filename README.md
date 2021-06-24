@@ -14,9 +14,9 @@ extension function:
 ```kotlin
 val contentType = "application/json".toMediaType()
 val retrofit = Retrofit.Builder()
-  .baseUrl("https://example.com/")
-  .addConverterFactory(Json.asConverterFactory(contentType))
-  .build()
+    .baseUrl("https://example.com/")
+    .addConverterFactory(Json.asConverterFactory(contentType))
+    .build()
 ```
 
 Response body types (e.g., `Call<User>`) and `@Body` types (e.g., `@Body user: User`) will now use the supplied
@@ -51,9 +51,9 @@ implementation 'de.nycode:retrofit2-kotlinx-serialization-converter:0.9.0'
 
 ```xml
 <dependency>
-  <groupId>de.nycode</groupId>
-  <artifactId>retrofit2-kotlinx-serialization-converter</artifactId>
-  <version>0.9.0</version>
+    <groupId>de.nycode</groupId>
+    <artifactId>retrofit2-kotlinx-serialization-converter</artifactId>
+    <version>0.9.0</version>
 </dependency>
 ```
 
