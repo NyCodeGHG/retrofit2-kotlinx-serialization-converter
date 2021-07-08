@@ -44,7 +44,7 @@ val retrofit = Retrofit.Builder()
 <summary>Gradle Kotlin</summary>
 
 ```kotlin
-implementation("de.nycode:retrofit2-kotlinx-serialization-converter:0.9.1")
+implementation("de.nycode:retrofit2-kotlinx-serialization-converter:0.9.2")
 ```
 
 </details>
@@ -53,7 +53,7 @@ implementation("de.nycode:retrofit2-kotlinx-serialization-converter:0.9.1")
 <summary>Gradle Groovy</summary>
 
 ```groovy
-implementation 'de.nycode:retrofit2-kotlinx-serialization-converter:0.9.1'
+implementation 'de.nycode:retrofit2-kotlinx-serialization-converter:0.9.2'
 ```
 
 </details>
@@ -66,7 +66,7 @@ implementation 'de.nycode:retrofit2-kotlinx-serialization-converter:0.9.1'
 <dependency>
     <groupId>de.nycode</groupId>
     <artifactId>retrofit2-kotlinx-serialization-converter</artifactId>
-    <version>0.9.1</version>
+    <version>0.9.2</version>
 </dependency>
 ```
 

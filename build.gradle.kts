@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "de.nycode"
-version = "0.9.1"
+version = "0.9.2"
 
 apply(from = "publishing.gradle.kts")
 
