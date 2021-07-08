@@ -1,7 +1,7 @@
 plugins {
     kotlin("jvm") version "1.5.20"
     kotlin("plugin.serialization") version "1.5.20"
-    id("org.jetbrains.dokka") version "1.4.32"
+    id("org.jetbrains.dokka") version "1.5.0"
 }
 
 group = "de.nycode"
