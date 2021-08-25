@@ -1,11 +1,11 @@
 plugins {
-    kotlin("jvm") version "1.5.21"
-    kotlin("plugin.serialization") version "1.5.21"
+    kotlin("jvm") version "1.5.30"
+    kotlin("plugin.serialization") version "1.5.30"
     id("org.jetbrains.dokka") version "1.5.0"
 }
 
 group = "de.nycode"
-version = "0.9.2"
+version = "0.9.3"
 
 apply(from = "publishing.gradle.kts")
 
@@ -15,7 +15,7 @@ repositories {
 
 dependencies {
     api("com.squareup.retrofit2", "retrofit", "2.9.0")
-    api("org.jetbrains.kotlinx", "kotlinx-serialization-core", "1.2.1")
+    api("org.jetbrains.kotlinx", "kotlinx-serialization-core", "1.2.2")
 
     testImplementation(platform("org.junit:junit-bom:5.7.2"))
     testImplementation("org.junit.jupiter", "junit-jupiter-api")
