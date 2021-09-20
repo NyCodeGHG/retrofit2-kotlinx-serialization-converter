@@ -23,8 +23,8 @@ dependencies {
 
     testImplementation("com.squareup.okhttp3", "mockwebserver3", "5.0.0-alpha.2")
     testImplementation("com.squareup.okhttp3", "mockwebserver3-junit5", "5.0.0-alpha.2")
-    testImplementation("org.jetbrains.kotlinx", "kotlinx-serialization-protobuf", "1.2.1")
-    testImplementation("org.jetbrains.kotlinx", "kotlinx-serialization-json", "1.2.1")
+    testImplementation("org.jetbrains.kotlinx", "kotlinx-serialization-protobuf", "1.2.2")
+    testImplementation("org.jetbrains.kotlinx", "kotlinx-serialization-json", "1.2.2")
 }
 
 java {
