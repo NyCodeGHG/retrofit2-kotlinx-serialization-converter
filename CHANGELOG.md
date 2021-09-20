@@ -1,6 +1,12 @@
 Change Log
 ==========
 
+Version 0.9.3 *(2021-09-20)*
+----------------------------
+* Kotlin updated to 1.5.31
+* kotlinx-serialization test dependencies updated to 1.2.2
+* Dokka updated to 1.5.30
+
 Version 0.9.3 *(2021-08-25)*
 ----------------------------
 
