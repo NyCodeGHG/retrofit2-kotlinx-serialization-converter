@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "de.nycode"
-version = "0.9.4"
+version = "0.10.0"
 
 apply(from = "publishing.gradle.kts")
 
@@ -15,7 +15,7 @@ repositories {
 
 dependencies {
     api("com.squareup.retrofit2", "retrofit", "2.9.0")
-    api("org.jetbrains.kotlinx", "kotlinx-serialization-core", "1.2.2")
+    api("org.jetbrains.kotlinx", "kotlinx-serialization-core", "1.3.1")
 
     testImplementation(platform("org.junit:junit-bom:5.8.1"))
     testImplementation("org.junit.jupiter", "junit-jupiter-api")
@@ -23,8 +23,8 @@ dependencies {
 
     testImplementation("com.squareup.okhttp3", "mockwebserver3", "5.0.0-alpha.2")
     testImplementation("com.squareup.okhttp3", "mockwebserver3-junit5", "5.0.0-alpha.2")
-    testImplementation("org.jetbrains.kotlinx", "kotlinx-serialization-protobuf", "1.2.2")
-    testImplementation("org.jetbrains.kotlinx", "kotlinx-serialization-json", "1.2.2")
+    testImplementation("org.jetbrains.kotlinx", "kotlinx-serialization-protobuf", "1.3.1")
+    testImplementation("org.jetbrains.kotlinx", "kotlinx-serialization-json", "1.3.1")
 }
 
 java {
