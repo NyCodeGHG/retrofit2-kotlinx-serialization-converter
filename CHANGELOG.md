@@ -1,7 +1,12 @@
 Change Log
 ==========
 
-Version 0.9.3 *(2021-09-20)*
+Version 0.10.0 *(2021-11-18)*
+----------------------------
+* Kotlin updated to 1.6.0
+* kotlinx-serialization updated to 1.3.1
+
+Version 0.9.4 *(2021-09-20)*
 ----------------------------
 * Kotlin updated to 1.5.31
 * kotlinx-serialization test dependencies updated to 1.2.2
