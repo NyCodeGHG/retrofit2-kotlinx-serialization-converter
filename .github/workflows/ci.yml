@@ -108,7 +108,7 @@ jobs:
         run: ./gradlew dokkaHtml
 
       - name: Deploy Docs to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.7
+        uses: JamesIves/github-pages-deploy-action@4.2.1
         with:
           branch: gh-pages
           folder: build/dokka/html
