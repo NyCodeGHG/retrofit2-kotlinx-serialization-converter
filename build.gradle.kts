@@ -1,11 +1,11 @@
 plugins {
-    kotlin("jvm") version "1.6.0"
-    kotlin("plugin.serialization") version "1.6.0"
-    id("org.jetbrains.dokka") version "1.6.0"
+    kotlin("jvm") version "1.6.10"
+    kotlin("plugin.serialization") version "1.6.10"
+    id("org.jetbrains.dokka") version "1.6.10"
 }
 
 group = "de.nycode"
-version = "0.10.0"
+version = "0.11.0"
 
 apply(from = "publishing.gradle.kts")
 
@@ -15,7 +15,7 @@ repositories {
 
 dependencies {
     api("com.squareup.retrofit2", "retrofit", "2.9.0")
-    api("org.jetbrains.kotlinx", "kotlinx-serialization-core", "1.3.1")
+    api("org.jetbrains.kotlinx", "kotlinx-serialization-core", "1.3.2")
 
     testImplementation(platform("org.junit:junit-bom:5.8.2"))
     testImplementation("org.junit.jupiter", "junit-jupiter-api")
@@ -23,8 +23,8 @@ dependencies {
 
     testImplementation("com.squareup.okhttp3", "mockwebserver3", "5.0.0-alpha.2")
     testImplementation("com.squareup.okhttp3", "mockwebserver3-junit5", "5.0.0-alpha.2")
-    testImplementation("org.jetbrains.kotlinx", "kotlinx-serialization-protobuf", "1.3.1")
-    testImplementation("org.jetbrains.kotlinx", "kotlinx-serialization-json", "1.3.1")
+    testImplementation("org.jetbrains.kotlinx", "kotlinx-serialization-protobuf", "1.3.2")
+    testImplementation("org.jetbrains.kotlinx", "kotlinx-serialization-json", "1.3.2")
 }
 
 java {

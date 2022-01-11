@@ -1,6 +1,12 @@
 Change Log
 ==========
 
+Version 0.11.0 *(2022-01-11*
+----------------------------
+* Kotlin updated to 1.6.10
+* kotlinx-serialization updated to 1.3.2
+* Dokka updated to 1.6.10
+
 Version 0.10.0 *(2021-11-18)*
 ----------------------------
 * Kotlin updated to 1.6.0
