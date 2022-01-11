@@ -23,7 +23,7 @@ jobs:
         with:
           arguments: |
             publish
-            -PsonatypeUsername=NyCode
+            -PsonatypeUser=NyCode
             -PsonatypePassword=${{ secrets.SONATYPE_PASSWORD }}
             -PsigningKey=${{ secrets.SIGNING_KEY }}
             -PsigningPassword=${{ secrets.SIGNING_PASSWORD }}
