@@ -17,7 +17,7 @@ dependencies {
     api("com.squareup.retrofit2", "retrofit", "2.9.0")
     api("org.jetbrains.kotlinx", "kotlinx-serialization-core", "1.3.2")
 
-    testImplementation(platform("org.junit:junit-bom:5.8.2"))
+    testImplementation(platform("org.junit:junit-bom:5.9.1"))
     testImplementation("org.junit.jupiter", "junit-jupiter-api")
     testRuntimeOnly("org.junit.jupiter", "junit-jupiter-engine")
 
